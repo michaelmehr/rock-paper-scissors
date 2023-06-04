@@ -52,27 +52,6 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    playerScore = 0;
-    computerScore = 0;
-    let playerSelection, computerSelection;
-    const LENGTH_OF_GAME = 5
-
-    for (let i = 0; i < LENGTH_OF_GAME; i++) {
-        playerSelection = prompt("Rock, paper, or scissors?");
-        computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(`Player Score: ${playerScore}. Computer Score: ${computerScore}.`)
-    }
-    if (playerScore === computerScore) {
-        console.log("You tied the game!");
-    } else if (playerScore > computerScore) {
-        console.log("You win the game!");
-    } else {
-        console.log("You lose the game!");
-    }
-}
-
 let playerScore = 0;
 let computerScore = 0;
 
