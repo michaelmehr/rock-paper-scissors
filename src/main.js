@@ -13,41 +13,41 @@ function playRound(playerSelection, computerSelection) {
     let pChoice = playerSelection.toLowerCase();
     if (pChoice === 'rock') {
         if (computerSelection === 'rock') {
-            return "You Tied! Both chose Rock";
+            return "tie";
         }
         if (computerSelection === 'paper') {
             computerScore++;
-            return "You Lose! Paper beats Rock";
+            return "lose";
         }
         if (computerSelection === 'scissors') {
             playerScore++;
-            return "You Win! Rock beats Scissors";
+            return "win";
         }
     }
     if (pChoice === 'paper') {
         if (computerSelection === 'rock') {
             playerScore++;
-            return "You Win! Paper beats Rock";
+            return "win";
         }
         if (computerSelection === 'paper') {
-            return "You Tied! Both chose Paper";
+            return "tie";
         }
         if (computerSelection === 'scissors') {
             computerScore++;
-            return "You Lose! Scissors beats Paper";
+            return "lose";
         }
     }
     if (pChoice === 'scissors') {
         if (computerSelection === 'rock') {
             computerScore++;
-            return "You Lose! Rock beats Scissors";
+            return "lose";
         }
         if (computerSelection === 'paper') {
             playerScore++;
-            return "You Win! Scissors beats Paper";
+            return "win";
         }
         if (computerSelection === 'scissors') {
-            return "You Tied! Both chose Scissors";
+            return "tie";
         }
     }
 }
