@@ -52,10 +52,24 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function updateScores() {
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+    if (playerScore >= 5) {
+        winnerDisplay.textContent = "WINNER: PLAYER";
+    } else if (computerScore >= 5) {
+        winnerDisplay.textContent = "WINNER: COMPUTER";
+    }
+}
+
 let playerScore = 0;
 let computerScore = 0;
 
 const buttons = document.querySelectorAll('button');
+
+const playerScoreDisplay = document.querySelector('#player-score');
+const computerScoreDisplay = document.querySelector('#computer-score');
+const winnerDisplay = document.querySelector('#winner');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
